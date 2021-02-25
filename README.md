@@ -6,6 +6,10 @@ Waiting's leetcode notes
 
 * [source code](https://github.com/Jamie-818/LeetCode-Notes-Waiting/blob/main/2021-02-25/Solution_867_transpose_matrix.java#L9-L20)
 
+[面试题 16.06. 最小差](https://leetcode-cn.com/problems/smallest-difference-lcci/)
+
+* [source code](https://github.com/Jamie-818/LeetCode-Notes-Waiting/blob/main/2021-02-25/Solution_16_06_smallest_difference_lcci.java#L20-L40)
+
 ### 2021-01-30
 
 [832. 翻转图像](https://leetcode-cn.com/problems/flipping-an-image/)
