@@ -2,6 +2,12 @@ Waiting's leetcode notes
 
 ### 2021-01-30
 
+[面试题 17.09. 第 k 个数](https://leetcode-cn.com/problems/get-kth-magic-number-lcci/)
+
+* [source code](https://github.com/Jamie-818/LeetCode-Notes-Waiting/blob/main/2021-02-26/Solution_17_09_get_kth_magic_number_lcci.java#L19-L68)
+
+### 2021-01-30
+
 [867. 转置矩阵](https://leetcode-cn.com/problems/transpose-matrix/)
 
 * [source code](https://github.com/Jamie-818/LeetCode-Notes-Waiting/blob/main/2021-02-25/Solution_867_transpose_matrix.java#L9-L20)
