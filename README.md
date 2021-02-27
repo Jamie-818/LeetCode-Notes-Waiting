@@ -1,4 +1,8 @@
-Waiting's leetcode notes
+### 2021-01-27
+
+[剑指 Offer 38. 字符串的排列](https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/)
+
+* [source code](https://github.com/Jamie-818/LeetCode-Notes-Waiting/blob/main/2021-02-27/Solution_o38_zi_fu_chuan_de_pai_lie_lcof.java#L22-L82)
 
 ### 2021-01-26
 
