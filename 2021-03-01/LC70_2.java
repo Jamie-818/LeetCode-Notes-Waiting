@@ -27,35 +27,28 @@
  * @author jamie
  * @date 2021/3/1 17:48
  */
-public class LC70_climbing_stairs_3 {
+public class LC70_2 {
 
     /**
-     * 交换法，交换刚刚计算过前后的值，达到前两位数相加的效果
+     * 动态规划，使用数组
      * @param n 楼梯数
      */
     public int climbStairs(int n) {
         if(n == 0 || n == 1 || n == 2){
             return n;
         }
-        // 假设a是第一个阶梯,b是第二个阶梯
-        int a = 1;
-        int b = 2;
-        // count 用于记录总数
-        int c = 0;
-        // 因为前面已经有两个台阶了，所以从3算起
+        int[] arrays = new int[n + 1];
+        arrays[0] = 0;
+        arrays[1] = 1;
+        arrays[2] = 2;
         for(int i = 3; i <= n; i++){
-            // c是当前台阶，也就是前两台阶相加
-            c = a + b;
-            // 然后把前两个台阶各自提前一个台阶
-            a = b;
-            b = c;
+            arrays[i] = arrays[i - 1] + arrays[i - 2];
         }
-        // 最终计算完，c就是当前台阶的数
-        return c;
+        return arrays[n];
     }
 
     public static void main(String[] args) {
-        LC70_climbing_stairs_3 solution = new LC70_climbing_stairs_3();
+        LC70_2 solution = new LC70_2();
         for(int i = 0; i <= 10; i++){
             int i1 = solution.climbStairs(i);
             System.out.println(i + ":---" + i1);

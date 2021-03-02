@@ -1,5 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
+
 
 /**
  * 70. 爬楼梯
@@ -28,32 +27,35 @@ import java.util.Map;
  * @author jamie
  * @date 2021/3/1 17:48
  */
-public class LC70_climbing_stairs_1 {
+public class LC70_3 {
 
     /**
-     * 优化递归法，计算值记录
+     * 交换法，交换刚刚计算过前后的值，达到前两位数相加的效果
      * @param n 楼梯数
      */
     public int climbStairs(int n) {
         if(n == 0 || n == 1 || n == 2){
             return n;
         }
-        Map<Integer, Integer> recordMap = new HashMap<>(n + 1);
-        recordMap.put(0, 0);
-        recordMap.put(1, 1);
-        recordMap.put(2, 2);
-        return climbStairs1(recordMap, n - 1) + climbStairs1(recordMap, n - 2);
-    }
-
-    private int climbStairs1(Map<Integer, Integer> recordMap, int n) {
-        if(recordMap.containsKey(n)){
-            return recordMap.get(n);
+        // 假设a是第一个阶梯,b是第二个阶梯
+        int a = 1;
+        int b = 2;
+        // count 用于记录总数
+        int c = 0;
+        // 因为前面已经有两个台阶了，所以从3算起
+        for(int i = 3; i <= n; i++){
+            // c是当前台阶，也就是前两台阶相加
+            c = a + b;
+            // 然后把前两个台阶各自提前一个台阶
+            a = b;
+            b = c;
         }
-        return climbStairs1(recordMap, n - 1) + climbStairs1(recordMap, n - 2);
+        // 最终计算完，c就是当前台阶的数
+        return c;
     }
 
     public static void main(String[] args) {
-        LC70_climbing_stairs_1 solution = new LC70_climbing_stairs_1();
+        LC70_3 solution = new LC70_3();
         for(int i = 0; i <= 10; i++){
             int i1 = solution.climbStairs(i);
             System.out.println(i + ":---" + i1);

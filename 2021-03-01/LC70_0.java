@@ -27,7 +27,7 @@
  * @author jamie
  * @date 2021/3/1 17:48
  */
-public class LC70_climbing_stairs_0 {
+public class LC70_0 {
 
     /**
      * 传统递归法，会超时
@@ -41,7 +41,7 @@ public class LC70_climbing_stairs_0 {
     }
 
     public static void main(String[] args) {
-        LC70_climbing_stairs_0 solution = new LC70_climbing_stairs_0();
+        LC70_0 solution = new LC70_0();
         for(int i = 0; i <= 10; i++){
             int i1 = solution.climbStairs(i);
             System.out.println(i + ":---" + i1);

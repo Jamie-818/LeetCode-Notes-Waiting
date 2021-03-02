@@ -27,43 +27,43 @@
  * @author jamie
  * @date 2021/3/1 17:48
  */
-public class LC70_climbing_stairs_2 {
+public class LC70_Expand {
 
     /**
-     * 动态规划，使用数组
+     * 扩展 每次最多能爬多少阶梯
      * @param n 楼梯数
+     * @param m 每次最多爬多少阶
      */
-    public int climbStairs(int n) {
+    public int climbStairsMax(int n, int m) {
         if(n == 0 || n == 1 || n == 2){
             return n;
         }
         int[] arrays = new int[n + 1];
-        arrays[0] = 0;
+        arrays[0] = 1;
         arrays[1] = 1;
-        arrays[2] = 2;
-        for(int i = 3; i <= n; i++){
-            arrays[i] = arrays[i - 1] + arrays[i - 2];
+        for(int i = 2; i <= n; i++){
+            int max = Math.min(i, m);
+            for(int j = 1; j <= max; j++){
+                arrays[i] = arrays[i] + arrays[i - j];
+            }
         }
+
         return arrays[n];
     }
 
     public static void main(String[] args) {
-        LC70_climbing_stairs_2 solution = new LC70_climbing_stairs_2();
+        LC70_Expand solution = new LC70_Expand();
         for(int i = 0; i <= 10; i++){
-            int i1 = solution.climbStairs(i);
+            int i1 = solution.climbStairsMax(i, 2);
             System.out.println(i + ":---" + i1);
         }
-        //        0:---0
-        //        1:---1
-        //        2:---2
-        //        3:---3
-        //        4:---5
-        //        5:---8
-        //        6:---13
-        //        7:---21
-        //        8:---34
-        //        9:---55
-        //        10:---89
+
+        System.out.println(solution.reverseLeftWords("abcdefg", 2));
+    }
+
+    public String reverseLeftWords(String s, int n) {
+        return s.substring(n) + s.substring(0, n);
+
     }
 
 }
