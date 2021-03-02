@@ -2,7 +2,10 @@
 
 [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)
 
-* [source code](https://github.com/Jamie-818/LeetCode-Notes-Waiting/blob/main/2021-03-01/LC70_climbing_stairs.java#L37-L108)
+* [source code](https://github.com/Jamie-818/LeetCode-Notes-Waiting/blob/main/2021-03-01/LC70_0.java)
+* [source code](https://github.com/Jamie-818/LeetCode-Notes-Waiting/blob/main/2021-03-01/LC70_1.java)
+* [source code](https://github.com/Jamie-818/LeetCode-Notes-Waiting/blob/main/2021-03-01/LC70_2.java)
+* [source code](https://github.com/Jamie-818/LeetCode-Notes-Waiting/blob/main/2021-03-01/LC70_3.java)
 
 ### 2021-02-28
 
