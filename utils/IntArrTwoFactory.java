@@ -10,9 +10,9 @@ public class IntArrTwoFactory implements TestHelperFactory<int[][]> {
 
     @Override
     public int[][] produce(String s) {
-        Queue<int[]> queue = new LinkedList<int[]>();
+        Queue<int[]> queue = new LinkedList<>();
         s = s.substring(0, s.length() - 1);
-        s = s.substring(1, s.length());
+        s = s.substring(1);
         int maxM = 0;
         TestHelperFactory<int[]> factory = new IntArrOneFactory();
         while(s.length() > 0){
@@ -22,7 +22,7 @@ public class IntArrTwoFactory implements TestHelperFactory<int[][]> {
             int[] intArr = factory.produce(temp);
             maxM = Math.max(intArr.length, maxM);
             queue.add(intArr);
-            s = s.substring(e + 1, s.length());
+            s = s.substring(e + 1);
         }
         int m = maxM;
         int n = queue.size();
