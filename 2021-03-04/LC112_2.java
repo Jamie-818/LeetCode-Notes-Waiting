@@ -57,7 +57,7 @@ public class LC112_2 {
             }
 
         }
-        // 都不匹配则返回trun
+        // 都不匹配则返回false
         return false;
     }
 

@@ -13,6 +13,7 @@ public class LC112_template {
      * @param targetSum
      */
     public boolean hasPathSum(TreeNode root, int targetSum) {
+
         return false;
     }
 
@@ -21,7 +22,6 @@ public class LC112_template {
         int targetSum = 22;
         TreeNodeFactory treeNodeFactory = new TreeNodeFactory();
         TreeNode root = treeNodeFactory.produce(s);
-        TreeNode.printNode(root);
         LC112_template lc112_template = new LC112_template();
         boolean b = lc112_template.hasPathSum(root, targetSum);
         boolean yesResult = LC112_1.hasPathSum(root, targetSum);
