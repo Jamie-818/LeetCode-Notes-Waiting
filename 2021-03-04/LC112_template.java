@@ -8,9 +8,10 @@ import pojo.TreeNode;
 public class LC112_template {
 
     /**
-     * 使用队列进行判断
-     * @param root
-     * @param targetSum
+     * 使用队列
+     * 使用递归法
+     * @param root      当前节点
+     * @param targetSum 预计到根子树的总数
      */
     public boolean hasPathSum(TreeNode root, int targetSum) {
 
@@ -23,9 +24,10 @@ public class LC112_template {
         TreeNodeFactory treeNodeFactory = new TreeNodeFactory();
         TreeNode root = treeNodeFactory.produce(s);
         LC112_template lc112_template = new LC112_template();
-        boolean b = lc112_template.hasPathSum(root, targetSum);
+        boolean result = lc112_template.hasPathSum(root, targetSum);
         boolean yesResult = LC112_1.hasPathSum(root, targetSum);
-        System.out.println("算法结果：" + (b == yesResult));
+        System.out.println("算法结果：" + result);
+        System.out.println("正确结果：" + yesResult);
     }
 
 }

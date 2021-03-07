@@ -10,8 +10,11 @@
 public class LC_53_template {
 
     public int maxSubArray(int[] nums) {
+        int countNum = nums[0];
+        // start
 
-        return 0;
+        // end
+        return countNum;
     }
 
     public static void main(String[] args) {
