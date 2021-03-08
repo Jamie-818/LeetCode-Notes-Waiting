@@ -16,34 +16,32 @@ public class LC2_0 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode pre = new ListNode(0);
         ListNode cur = pre;
-        //  start
-        // 记录补数数
+        // 记录补位数
         int carry = 0;
         while(l1 != null | l2 != null){
             int x = l1 != null?l1.val:0;
             int y = l2 != null?l2.val:0;
-            // 首位数相加
+            // 位数相加
             int sum = x + y + carry;
-            // 获取补位数
+            // 获取补位数 or 计算位数值
             carry = sum / 10;
             sum = sum % 10;
             // 插入值
             cur.next = new ListNode(sum);
             // 往前走一步
             cur = cur.next;
+            // 如果l1 or l2不为空，则向前走一步
             if(l1 != null){
                 l1 = l1.next;
             }
             if(l2 != null){
                 l2 = l2.next;
             }
-
         }
         // 判断有没有补位数
         if(carry >= 1){
             cur.next = new ListNode(carry);
         }
-        //end
         return pre.next;
     }
 
