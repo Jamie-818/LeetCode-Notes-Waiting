@@ -23,38 +23,26 @@
  * 链接：https://leetcode-cn.com/problems/climbing-stairs
  * @author jamie
  */
-public class LC70_3 {
+public class LC70_template {
 
     /**
-     * 交换法，交换刚刚计算过前后的值，达到前两位数相加的效果
      * @param n 楼梯数
      */
     public int climbStairs(int n) {
-        if(n == 0 || n == 1 || n == 2){
-            return n;
-        }
-        // 假设a是第一个阶梯,b是第二个阶梯
-        int a = 1;
-        int b = 2;
-        // count 用于记录总数
-        int c = 0;
-        // 因为前面已经有两个台阶了，所以从3算起
-        for(int i = 3; i <= n; i++){
-            // c是当前台阶，也就是前两台阶相加
-            c = a + b;
-            // 然后把前两个台阶各自提前一个台阶
-            a = b;
-            b = c;
-        }
-        // 最终计算完，c就是当前台阶的数
-        return c;
+        // start
+
+        // end
+        return 0;
     }
 
     public static void main(String[] args) {
-        LC70_3 solution = new LC70_3();
+        LC70_1 lc70_1 = new LC70_1();
+        LC70_template solution = new LC70_template();
         for(int i = 0; i <= 10; i++){
-            int i1 = solution.climbStairs(i);
-            System.out.println(i + ":---" + i1);
+            int result = solution.climbStairs(i);
+            int yesResult = lc70_1.climbStairs(i);
+            System.out.println("目前楼梯数为：" + i + "，正确答案为：" + yesResult + "，输出答案为：" + result + "，是否正确：" + (yesResult
+                    == result));
         }
         //        0:---0
         //        1:---1
