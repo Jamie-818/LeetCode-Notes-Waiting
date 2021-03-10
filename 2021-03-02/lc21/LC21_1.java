@@ -1,3 +1,6 @@
+package lc21;
+
+import lc.LcUtils;
 import pojo.ListNode;
 
 /**
@@ -35,15 +38,14 @@ public class LC21_1 {
 
     public static void main(String[] args) {
         LC21_1 lc21 = new LC21_1();
-        IntArrOneFactory intArr = new IntArrOneFactory();
-        int[] a = intArr.produce("[1,2,4]");
-        int[] b = intArr.produce("[1,3,4]");
+        int[] a = LcUtils.oneIntArrFactory("[1,2,4]");
+        int[] b = LcUtils.oneIntArrFactory("[1,3,4]");
         ListNode next1 = new ListNode(a);
         ListNode next2 = new ListNode(b);
-        ListNode.print(next1);
-        ListNode.print(next2);
+        LcUtils.print(next1);
+        LcUtils.print(next2);
         ListNode listNode = lc21.mergeTwoLists(next1, next2);
-        ListNode.print(listNode);
+        LcUtils.print(listNode);
 
     }
 

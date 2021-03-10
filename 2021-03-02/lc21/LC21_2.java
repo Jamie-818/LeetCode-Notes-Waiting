@@ -1,3 +1,6 @@
+package lc21;
+
+import lc.LcUtils;
 import pojo.ListNode;
 
 /**
@@ -6,7 +9,7 @@ import pojo.ListNode;
  * @author jamie
  * @date 2021/3/2 9:41
  */
-public class LC21_0 {
+public class LC21_2 {
 
     /**
      * 迭代法
@@ -37,24 +40,23 @@ public class LC21_0 {
             prev = prev.next;
         }
         // 当循环完的时候，不为空的则直接放在末尾
-        prev.next = l1 != null?l1:l2;
+        prev.next = l1 != null ? l1 : l2;
         // 丢起头节点返回
         return res.next;
     }
 
     public static void main(String[] args) {
-        LC21_0 lc21 = new LC21_0();
-        IntArrOneFactory intArr = new IntArrOneFactory();
-        int[] a = intArr.produce("[1,2,4]");
-        int[] b = intArr.produce("[1,3,4]");
+        LC21_2 lc21 = new LC21_2();
+        int[] a = LcUtils.oneIntArrFactory("[1,2,4]");
+        int[] b = LcUtils.oneIntArrFactory("[1,3,4]");
         ListNode next1 = new ListNode(a);
         ListNode next2 = new ListNode(b);
-        ListNode.print(next1);
-        ListNode.print(next2);
+        LcUtils.print(next1);
+        LcUtils.print(next2);
         // [1,2,4]
         // [1,3,4]
         ListNode listNode = lc21.mergeTwoLists(next1, next2);
-        ListNode.print(listNode);
+        LcUtils.print(listNode);
         // [1,1,2,3,4,4]
     }
 

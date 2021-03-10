@@ -45,17 +45,6 @@ public class ListNode {
         return "ListNode{" + "val=" + val + ", next=" + next + '}';
     }
 
-    public static void print(ListNode head) {
-        System.out.print("[");
-        while(head != null){
-            if(head.next != null){
-                System.out.print(head.val + ",");
-            }else{
-                System.out.print(head.val);
-            }
-            head = head.next;
-        }
-        System.out.println("]");
-    }
+
 
 }
