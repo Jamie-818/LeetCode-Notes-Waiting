@@ -1,3 +1,5 @@
+package lc470;
+
 import pojo.SolBase;
 
 /**
