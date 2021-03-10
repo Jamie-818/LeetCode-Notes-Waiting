@@ -1,4 +1,4 @@
-
+package lc70;
 
 /**
  * 70. 爬楼梯
@@ -20,29 +20,38 @@
  * 1.  1 阶 + 1 阶 + 1 阶
  * 2.  1 阶 + 2 阶
  * 3.  2 阶 + 1 阶
+ *
+ * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/climbing-stairs
+ * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  * @author jamie
+ * @date 2021/3/1 17:48
  */
-public class LC70_template {
+public class LC70_2 {
 
     /**
+     * 动态规划，使用数组
      * @param n 楼梯数
      */
     public int climbStairs(int n) {
-        // start
-
-        // end
-        return 0;
+        if(n == 0 || n == 1 || n == 2){
+            return n;
+        }
+        int[] arrays = new int[n + 1];
+        arrays[0] = 0;
+        arrays[1] = 1;
+        arrays[2] = 2;
+        for(int i = 3; i <= n; i++){
+            arrays[i] = arrays[i - 1] + arrays[i - 2];
+        }
+        return arrays[n];
     }
 
     public static void main(String[] args) {
-        LC70_1 lc70_1 = new LC70_1();
-        LC70_template solution = new LC70_template();
+        LC70_2 solution = new LC70_2();
         for(int i = 0; i <= 10; i++){
-            int result = solution.climbStairs(i);
-            int yesResult = lc70_1.climbStairs(i);
-            System.out.println("目前楼梯数为：" + i + "，正确答案为：" + yesResult + "，输出答案为：" + result + "，是否正确：" + (yesResult
-                    == result));
+            int i1 = solution.climbStairs(i);
+            System.out.println(i + ":---" + i1);
         }
         //        0:---0
         //        1:---1

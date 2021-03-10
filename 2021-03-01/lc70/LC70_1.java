@@ -1,4 +1,7 @@
+package lc70;
 
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 70. 爬楼梯
@@ -27,43 +30,47 @@
  * @author jamie
  * @date 2021/3/1 17:48
  */
-public class LC70_Expand {
+public class LC70_1 {
 
     /**
-     * 扩展 每次最多能爬多少阶梯
+     * 优化递归法，计算值记录
      * @param n 楼梯数
-     * @param m 每次最多爬多少阶
      */
-    public int climbStairsMax(int n, int m) {
+    public int climbStairs(int n) {
         if(n == 0 || n == 1 || n == 2){
             return n;
         }
-        int[] arrays = new int[n + 1];
-        arrays[0] = 1;
-        arrays[1] = 1;
-        for(int i = 2; i <= n; i++){
-            int max = Math.min(i, m);
-            for(int j = 1; j <= max; j++){
-                arrays[i] = arrays[i] + arrays[i - j];
-            }
-        }
+        Map<Integer, Integer> recordMap = new HashMap<>(n + 1);
+        recordMap.put(0, 0);
+        recordMap.put(1, 1);
+        recordMap.put(2, 2);
+        return climbStairs1(recordMap, n - 1) + climbStairs1(recordMap, n - 2);
+    }
 
-        return arrays[n];
+    private int climbStairs1(Map<Integer, Integer> recordMap, int n) {
+        if(recordMap.containsKey(n)){
+            return recordMap.get(n);
+        }
+        return climbStairs1(recordMap, n - 1) + climbStairs1(recordMap, n - 2);
     }
 
     public static void main(String[] args) {
-        LC70_Expand solution = new LC70_Expand();
+        LC70_1 solution = new LC70_1();
         for(int i = 0; i <= 10; i++){
-            int i1 = solution.climbStairsMax(i, 2);
+            int i1 = solution.climbStairs(i);
             System.out.println(i + ":---" + i1);
         }
-
-        System.out.println(solution.reverseLeftWords("abcdefg", 2));
-    }
-
-    public String reverseLeftWords(String s, int n) {
-        return s.substring(n) + s.substring(0, n);
-
+        //        0:---0
+        //        1:---1
+        //        2:---2
+        //        3:---3
+        //        4:---5
+        //        5:---8
+        //        6:---13
+        //        7:---21
+        //        8:---34
+        //        9:---55
+        //        10:---89
     }
 
 }

@@ -1,4 +1,4 @@
-
+package lc70;
 
 /**
  * 70. 爬楼梯
@@ -20,35 +20,38 @@
  * 1.  1 阶 + 1 阶 + 1 阶
  * 2.  1 阶 + 2 阶
  * 3.  2 阶 + 1 阶
- *
- * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/climbing-stairs
- * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  * @author jamie
- * @date 2021/3/1 17:48
  */
-public class LC70_2 {
+public class LC70_3 {
 
     /**
-     * 动态规划，使用数组
+     * 交换法，交换刚刚计算过前后的值，达到前两位数相加的效果
      * @param n 楼梯数
      */
     public int climbStairs(int n) {
         if(n == 0 || n == 1 || n == 2){
             return n;
         }
-        int[] arrays = new int[n + 1];
-        arrays[0] = 0;
-        arrays[1] = 1;
-        arrays[2] = 2;
+        // 假设a是第一个阶梯,b是第二个阶梯
+        int a = 1;
+        int b = 2;
+        // count 用于记录总数
+        int c = 0;
+        // 因为前面已经有两个台阶了，所以从3算起
         for(int i = 3; i <= n; i++){
-            arrays[i] = arrays[i - 1] + arrays[i - 2];
+            // c是当前台阶，也就是前两台阶相加
+            c = a + b;
+            // 然后把前两个台阶各自提前一个台阶
+            a = b;
+            b = c;
         }
-        return arrays[n];
+        // 最终计算完，c就是当前台阶的数
+        return c;
     }
 
     public static void main(String[] args) {
-        LC70_2 solution = new LC70_2();
+        LC70_3 solution = new LC70_3();
         for(int i = 0; i <= 10; i++){
             int i1 = solution.climbStairs(i);
             System.out.println(i + ":---" + i1);
