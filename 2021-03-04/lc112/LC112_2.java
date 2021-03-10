@@ -1,3 +1,6 @@
+package lc112;
+
+import lc.LcUtils;
 import pojo.TreeNode;
 
 import java.util.LinkedList;
@@ -64,8 +67,7 @@ public class LC112_2 {
     public static void main(String[] args) {
         String s = "[5,4,8,11,null,13,4,7,2,null,null,null,1]";
         int targetSum = 22;
-        TreeNodeFactory treeNodeFactory = new TreeNodeFactory();
-        TreeNode root = treeNodeFactory.produce(s);
+        TreeNode root = LcUtils.treeNodeFactory(s);
         TreeNode.printNode(root);
         LC112_2 lc112_template = new LC112_2();
         boolean b = lc112_template.hasPathSum(root, targetSum);
