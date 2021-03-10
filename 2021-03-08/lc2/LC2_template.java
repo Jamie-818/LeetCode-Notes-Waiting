@@ -1,3 +1,6 @@
+package lc2;
+
+import lc.LcUtils;
 import pojo.ListNode;
 
 /**
@@ -13,6 +16,12 @@ import pojo.ListNode;
  */
 public class LC2_template {
 
+    /**
+     * 1、进位
+     * @param l1 链表1
+     * @param l2 链表2
+     * @return 相加的链表
+     */
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode pre = new ListNode(0);
         ListNode cur = pre;
@@ -27,7 +36,7 @@ public class LC2_template {
         ListNode l1 = new ListNode(new int[]{2, 4, 5});
         ListNode l2 = new ListNode(new int[]{5, 6, 4});
         ListNode node = lc2.addTwoNumbers(l1, l2);
-        ListNode.print(node);
+        LcUtils.print(node);
         // 7001
     }
 

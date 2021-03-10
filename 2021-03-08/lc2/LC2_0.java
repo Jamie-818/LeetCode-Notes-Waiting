@@ -1,3 +1,6 @@
+package lc2;
+
+import lc.LcUtils;
 import pojo.ListNode;
 
 /**
@@ -19,8 +22,8 @@ public class LC2_0 {
         // 记录补位数
         int carry = 0;
         while(l1 != null | l2 != null){
-            int x = l1 != null?l1.val:0;
-            int y = l2 != null?l2.val:0;
+            int x = l1 != null ? l1.val : 0;
+            int y = l2 != null ? l2.val : 0;
             // 位数相加
             int sum = x + y + carry;
             // 获取补位数 or 计算位数值
@@ -50,7 +53,7 @@ public class LC2_0 {
         ListNode l1 = new ListNode(new int[]{2, 4, 3});
         ListNode l2 = new ListNode(new int[]{5, 6, 4});
         ListNode node = lc2_0.addTwoNumbers(l1, l2);
-        System.out.println(node.toString());
+        LcUtils.print(node);
     }
 
 }
