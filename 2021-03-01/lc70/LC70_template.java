@@ -31,9 +31,6 @@ public class LC70_template {
      * @param n 楼梯数
      */
     public int climbStairs(int n) {
-        // start
-
-        // end
         return 0;
     }
 
