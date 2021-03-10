@@ -1,3 +1,5 @@
+import lc.LcUtils;
+
 import java.util.Arrays;
 
 /**
@@ -20,7 +22,7 @@ public class LC503_template {
 
     public static void main(String[] args) {
         String data = "[1,2,1]";
-        int[] oneIntArr = LcUtils.getOneIntArr(data);
+        int[] oneIntArr = LcUtils.oneIntArrFactory(data);
         LC503_template lc503_template = new LC503_template();
         LC503_0 lc503_0 = new LC503_0();
         int[] ints = lc503_template.nextGreaterElements(oneIntArr);

@@ -1,3 +1,5 @@
+import lc.LcUtils;
+
 import java.util.Arrays;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -47,7 +49,7 @@ public int[] nextGreaterElements(int[] nums) {
 
     public static void main(String[] args) {
         String data = "[1,2,1]";
-        int[] oneIntArr = LcUtils.getOneIntArr(data);
+        int[] oneIntArr = LcUtils.oneIntArrFactory(data);
         LC503_0 lc503 = new LC503_0();
         int[] ints = lc503.nextGreaterElements(oneIntArr);
         for(int anInt: ints){
