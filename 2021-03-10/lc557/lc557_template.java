@@ -3,9 +3,8 @@ package lc557;
 public class lc557_template {
 
     /**
-     * 字符串切割 + 前后交换
-     * 时间复杂度O(N)：取决于字符串的长度
-     * 空间复杂度O(N)：取决于单次数
+     * 1、字符串切割 + 前后交换
+     * 2、从头截取单词从头到尾处理
      * @param s 字符串
      */
     public String reverseWords(String s) {
