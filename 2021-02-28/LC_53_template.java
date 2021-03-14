@@ -1,19 +1,13 @@
 /**
  * 53. 最大子序和
  * 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
- *
- * 来源：力扣（LeetCode）
- * 链接：https://leetcode-cn.com/problems/maximum-subarray
  * @author jamie
- * @date 2021/2/28 21:19
  */
 public class LC_53_template {
 
     public int maxSubArray(int[] nums) {
         int countNum = nums[0];
-        // start
 
-        // end
         return countNum;
     }
 

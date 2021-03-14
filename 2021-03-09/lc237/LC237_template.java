@@ -10,7 +10,7 @@ import pojo.ListNode;
 public class LC237_template {
 
     /**
-     * 坑爹题目，这题目进来其实就是直接要删除的node接口
+     * 进来的对象就直接要删除的node接口
      * @param node 待删除的node结点
      */
     public void deleteNode(ListNode node) {

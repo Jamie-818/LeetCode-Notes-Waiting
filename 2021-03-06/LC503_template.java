@@ -12,21 +12,15 @@ import java.util.Arrays;
 public class LC503_template {
 
     public int[] nextGreaterElements(int[] nums) {
-        int length = nums.length;
-        int[] res = new int[length];
-        // start
-
-        // end
-        return res;
+        return null;
     }
 
     public static void main(String[] args) {
         String data = "[1,2,1]";
-        int[] oneIntArr = LcUtils.oneIntArrFactory(data);
         LC503_template lc503_template = new LC503_template();
         LC503_0 lc503_0 = new LC503_0();
-        int[] ints = lc503_template.nextGreaterElements(oneIntArr);
-        int[] yesResult = lc503_0.nextGreaterElements(oneIntArr);
+        int[] ints = lc503_template.nextGreaterElements(LcUtils.oneIntArrFactory(data));
+        int[] yesResult = lc503_0.nextGreaterElements(LcUtils.oneIntArrFactory(data));
         System.out.println("算法输出为：" + Arrays.toString(ints));
         System.out.println("正确输出为：" + Arrays.toString(yesResult));
 
