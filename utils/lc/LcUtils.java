@@ -100,4 +100,18 @@ public class LcUtils {
         System.out.println("]");
     }
 
+    public static ListNode listNodeFactory(String s) {
+        s = s.replace("[", "");
+        s = s.replace("]", "");
+        String[] nums = s.split(",");
+
+        ListNode head = new ListNode(-1);
+        ListNode target = head;
+        for(String num: nums){
+            target.next = new ListNode(Integer.parseInt(num));
+            target = target.next;
+        }
+        return head.next;
+    }
+
 }
