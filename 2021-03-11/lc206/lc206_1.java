@@ -6,6 +6,11 @@ import pojo.ListNode;
 import java.util.Deque;
 import java.util.LinkedList;
 
+/**
+ * LC206. 反转链表
+ * @author jamie
+ * @date 2021/3/14 11:04
+ */
 public class lc206_1 {
 
     /**
@@ -18,10 +23,12 @@ public class lc206_1 {
         ListNode ret = new ListNode(-1);
         ListNode node = ret;
         Deque<Integer> stack = new LinkedList<>();
+        // 迭代head节点插入栈
         while(head != null){
             stack.push(head.val);
             head = head.next;
         }
+        // 迭代栈节点出栈
         while(!stack.isEmpty()){
             Integer pop = stack.pop();
             node.next = new ListNode(pop);

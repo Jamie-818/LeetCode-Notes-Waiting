@@ -3,6 +3,11 @@ package lc206;
 import lc.LcUtils;
 import pojo.ListNode;
 
+/**
+ * LC206. 反转链表
+ * @author jamie
+ * @date 2021/3/14 11:04
+ */
 public class lc206_template {
 
     /**
@@ -11,16 +16,7 @@ public class lc206_template {
      * @param head 链表
      */
     public ListNode reverseList(ListNode head) {
-        ListNode pre = null;
-        ListNode cul = head;
-        ListNode temp;
-        while(cul != null){
-            temp = cul.next;
-            cul.next = pre;
-            pre = cul;
-            cul = temp;
-        }
-        return pre;
+        return null;
     }
 
     public static void main(String[] args) {
